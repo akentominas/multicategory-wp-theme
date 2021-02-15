@@ -1,0 +1,1 @@
+# multicategory-wp-theme
