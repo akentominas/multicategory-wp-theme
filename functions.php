@@ -17,5 +17,18 @@ function multicategory_blog_features() {
     // add_image_size('professorPortrait', 480, 650, true);
     // add_image_size('pageBanner', 1500, 350, true);
   }
-  
+
   add_action('after_setup_theme', 'multicategory_blog_features');
+
+function multicategory_post_types() {
+    register_post_type('like', array(
+        'public' => true,
+	'labels' => array(
+		'name' => 'Likes',
+		'add_new_items' => 'Add New Like'
+	),	
+	'menu_icon' => 'dashicons-heart'
+    ));
+  }
+
+add_action('init', 'multicategory_post_types');
