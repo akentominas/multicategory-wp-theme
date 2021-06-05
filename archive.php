@@ -14,6 +14,8 @@ get_header();
                 <?php
                     while(have_posts()) {
                         the_post();
+                        $get_author_id = get_the_author_meta('ID');
+                        $get_author_gravatar = get_avatar_url($get_author_id, array('size' => 450));
                         ?>
                         <a href="<?php echo the_permalink()?>">
                         <div class="card">
@@ -21,8 +23,8 @@ get_header();
                             <div class="likes-comments">
                                     <div class="far fa-heart"></div>
                                     3
-                                    <i class="far fa-comments"></i>
-                                    4
+                                    <!-- <i class="far fa-comments"></i>
+                                    <?php echo get_comments_number(); ?> -->
                             </div>
                             </img>
                             <div class="card-body">
@@ -50,11 +52,17 @@ get_header();
                                     <i class="far fa-calendar-alt"></i>
                                     <?php echo get_the_date('M Y d'); ?>
                                 </div>
-                                <p class="card-content"><?php the_excerpt(); ?></p>
+                                <p class="card-content"><?php 
+                                    if (has_excerpt()) {
+                                        echo wp_trim_words(get_the_excerpt(), 16);
+                                    } else {
+                                       echo wp_trim_words(get_the_content(), 16);
+                                    }
+                                ?></p>
                                 <div class="card-post-info">
                                     <div class="inner-card-post-info-left">
                                     <div>
-                                        <img src="https://miro.medium.com/max/600/1*PiHoomzwh9Plr9_GA26JcA.png" alt="" class="img">
+                                        <img src="<?php echo $get_author_gravatar; ?>" alt="" class="img">
                                     </div>
                                     </div>
                                     <div class="inner-card-post-info-right">

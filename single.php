@@ -14,18 +14,28 @@ get_header();
                 <?php
                     while(have_posts()) {
                         the_post();
+                        $get_author_id = get_the_author_meta('ID');
+                        $get_author_gravatar = get_avatar_url($get_author_id, array('size' => 450));
+                        
+                        if ( !have_comments()) {
+                            $comments_count = 0;
+                        } else {
+                            $comments_count = 3;
+                        }
                         ?>
                             <div class="single-post-banner-wrapper">
                                 <?php the_post_thumbnail( 'full', array( 'class' => 'responsive-thumbnail' ) ); ?>
                                 <div class="single-post-likes-comments">
                                     <div class="far fa-heart"></div>
                                     3
-                                    <i class="far fa-comments"></i>
-                                    4
+                                    <!-- <i class="far fa-comments"></i>
+                                    <?php echo get_comments_number(); ?> -->
                             </div>
                             </div>                        
                             <div class="single-post-info">
-                            <div><img src="https://miro.medium.com/max/600/1*PiHoomzwh9Plr9_GA26JcA.png" alt="" class="img"></img></div>
+                            <div>
+                                <img src="<?php echo $get_author_gravatar; ?>" alt="" class="img"></img>
+                            </div>
                             <div><?php the_author() ?></div>
                             <div class="">
                                     <i class="far fa-calendar-alt"></i>
@@ -36,9 +46,13 @@ get_header();
                             <h1 class="single-post-title"><?php the_title(); ?></h1>
                             <p><?php the_content() ?></p>
                         </div>
-                        <div class="single-post-author-bio">
+                        <!-- <div class="single-post-author-bio">
                             Authon Bio Here
-                        </div>
+                        </div> -->
+                        <!-- <div class="single-post-comment-section">
+                            
+                        </div> -->
+                      
                        <?php
                     }
 

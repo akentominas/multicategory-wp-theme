@@ -8,13 +8,13 @@
         </button>
         <ul>
             <li>
-                <a href="#"><a href="#" class="fa fa-facebook"></a>
+                <a href="#"><a href="#" class="fab fa-facebook"></a>
             </li>
             <li>
-                <a href="#"><a href="#" class="fa fa-youtube"></a>
+                <a href="#"><a href="#" class="fab fa-youtube"></a>
             </li>
             <li>
-                <a href="#"><a href="#" class="fa fa-instagram"></a>
+                <a href="#"><a href="#" class="fab fa-instagram"></a>
             </li>
         </ul>
     </footer>

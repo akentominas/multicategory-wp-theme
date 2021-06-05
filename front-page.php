@@ -24,24 +24,28 @@ get_header();
                             esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
                             esc_html( $category->name )
                         );
-                        
+
                          // Get the ID of a given category
                         $category_id = get_cat_ID(  $category->name );
-
                         // Get the URL of this category
                         $category_link = get_category_link( $category_id );
-
                         ?>
-                        
+
                         <div class="boxxx">
                         <a href="<?php echo esc_url( $category_link ); ?>">
-                            <div class="blog-card spring-fever" style="background-image: url('<?php echo $category->description ?>')"; >
-                                <div class="cat-name"><?php echo $category->name; ?></div>
-                                <div class="cat-banner"><h1><? echo $category->count ?> articles</h1></div>
-                            </div><!-- /.blog-card -->
-                                </a>
+                            <div class="module mid" style="background: 
+                                linear-gradient(
+                                rgba(0, 0, 0, 0.6),
+                                rgba(0, 0, 0, 0.6)
+                                ),
+                                url(<?php echo $category->description ?>);
+                                background-size: 100% 100%;")>
+                                <h2><?php echo $category->name; ?></h2>
+                                <!-- count category posts <? echo $category->count ?> -->
+                            </div>
+                        </a>
                         </div>
-                    
+                        
                         <?php
 
                     } 
