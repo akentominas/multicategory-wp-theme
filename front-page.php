@@ -26,9 +26,10 @@ get_header();
                         );
 
                          // Get the ID of a given category
-                        $category_id = get_cat_ID(  $category->name );
+			$category_id = get_cat_ID(  $category->name );
                         // Get the URL of this category
                         $category_link = get_category_link( $category_id );
+
                         ?>
 
                         <div class="boxxx">

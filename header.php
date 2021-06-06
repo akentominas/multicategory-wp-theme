@@ -8,9 +8,9 @@
   <body <?php body_class(); ?>>
     <header class="main-head">
         <nav>
-            <a href="<?php echo site_url('/') ?>"><h1 id="logo">codeXposer</h1></a>
+            <a href="<?php echo site_url('/') ?>"><h1 id="logo">stasdev</h1></a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
                 <li><a href="#" class="fab fa-facebook"></a></li>
                 <li><a href="#" class="fab fa-youtube"></a></li>
                 <li><a href="#" class="fab fa-instagram"></a></li>

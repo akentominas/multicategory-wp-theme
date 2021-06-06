@@ -1,5 +1,5 @@
 <footer>
-        <h4>codeXposer&copy;  <?php echo date('Y'); ?> - Powered by Wordpress - Developed by akentominas</h4>
+        <h4>stasdev.io&copy;  <?php echo date('Y'); ?> - Powered by Wordpress - Theme developed by akentominas.com</h4>
         <button
                 type="button"
                 class="button btn-subscribe"
