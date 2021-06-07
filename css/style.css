@@ -15,7 +15,7 @@
     --header5: calc(4rem + 1vw);
     --header6: calc(4.5rem + 1vw);
     --text: calc(1.5rem + 1vw);
-    --small-text: calc(2rem);
+    --small-text: calc(1.9rem + 0.1vw);
     --big: calc(6rem + 1vw);
     --darker-color: #22212E;
     --gray-text: #727892;
@@ -439,7 +439,7 @@
     .nav-links a {
       color: rgb(250, 250, 250);
       font-size: var(--header3);
-      text-decoration: underline;
+      text-decoration: none;
     }
     .nav-links {
       background: var(--darker-color);
@@ -449,6 +449,7 @@
       top: 0;
       left: 100%;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       transition: transform 1s ease;
     }
@@ -481,8 +482,8 @@
 
     .boxxx {
     
-      height: 90%;
-      width: 90%;
+      height: 150px;
+      width: 150px;
       margin: 2%;
     }
   

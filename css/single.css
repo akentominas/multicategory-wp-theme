@@ -164,4 +164,7 @@
       width: 100%;
       height: 50vh;
     }
+    .wrapper-single-post p {
+      font-size: 2.1rem;
+  }
   }
